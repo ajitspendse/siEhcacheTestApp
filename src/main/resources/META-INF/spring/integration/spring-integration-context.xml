@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-ehcacheadapter="http://www.springframework.org/schema/integration/ehcacheadapter"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:int-feed="http://www.springframework.org/schema/integration/feed"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration
+		http://www.springframework.org/schema/integration/spring-integration-2.1.xsd
+		http://www.springframework.org/schema/task
+		http://www.springframework.org/schema/task/spring-task-3.0.xsd
+		http://www.springframework.org/schema/integration/feed
+		http://www.springframework.org/schema/integration/feed/spring-integration-feed.xsd
+		http://www.springframework.org/schema/integration/ehcacheadapter
+		file:///Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCache/src/main/resources/org/ehcache/siehcache/config/xml/spring-integration-ehcacheadapter-2.2.xsd">
+
+	<!-- See also: http://static.springsource.org/spring-integration/reference/htmlsingle/#gateway-proxy 
+		http://www.eaipatterns.com/MessagingGateway.html -->
+
+	<!-- **************** Cache Aside ********************* -->
+
+
+	<int:gateway id="cacheAsideGateway"
+		default-request-timeout="5000" default-reply-timeout="5000"
+		default-request-channel="cacheCheckChannel" service-interface="org.ehcache.myapp.service.CacheCaller" />
+	<int:channel id="cacheCheckChannel" />
+	<int:service-activator id="getFromCache"
+		input-channel="cacheCheckChannel" output-channel="getChannel" ref="cacheCaller"
+		method="getData" />
+	<int:channel id="getChannel" />
+	<int-ehcacheadapter:outbound-gateway
+		id="ehcacheGatewayGetData" 
+		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		cache="mycache"
+		auto-startup="true" order="1" request-channel="getChannel"
+		cacheManagerName="TestCache"
+		reply-channel="validateChannel" reply-timeout="100" />
+		
+	<int:channel id="validateChannel" />
+	<!-- Setup Detour using recipient list -->
+	<int:router method="cacheRouter" id="cacheRouter"
+		input-channel="validateChannel">
+		<bean class="org.ehcache.myapp.router.CacheCallerRouter" />
+	</int:router>
+	<int:channel id="faaDataChannel" />
+	<int:service-activator id="faaDataService"
+		input-channel="faaDataChannel" output-channel="putFaaData"
+		ref="faaDao" method="getData" />
+	<int:channel id="putFaaData" />
+	<int:service-activator id="putFaaDataService"
+		input-channel="putFaaData" output-channel="getDataOutputChannel"
+		ref="cacheCaller" method="putData" />
+	<int:channel id="endChannel" />
+	<int-ehcacheadapter:outbound-gateway
+		id="ehcacheadapterOutboundGateway" 
+		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml"
+		cache="mycache" auto-startup="true" order="1" request-channel="getDataOutputChannel"
+		cacheManagerName="TestCache"
+		reply-channel="endChannel" reply-timeout="100" />
+
+<!-- ********** The beans that hit call setup the call or get the data from the data source -->
+	<bean id="cacheCaller" class="org.ehcache.myapp.service.CacheCallerImp" />
+	<bean id="faaDao" class="org.ehcache.myapp.dao.FaaDaoImp" />
+	<bean id="usgs" class="org.ehcache.myapp.dao.UsgsImp" />
+
+
+
+	<!-- **************** GETS ********************* -->
+	<int:gateway id="getGateway" default-request-timeout="5000"
+		default-reply-timeout="5000" default-request-channel="getDataChannel"
+		service-interface="org.ehcache.myapp.service.CacheCaller" />
+
+	<int:service-activator id="getCacheService"
+		input-channel="getDataChannel" output-channel="getDataOutputChannel" 
+		ref="cacheCaller" method="getData" />
+	<int:channel id="getDataChannel" />
+	<int:channel id="getDataOutputChannel" />
+	<int-ehcacheadapter:outbound-gateway
+		id="ehcacheGatewayGet" 
+		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		cache="mycache"
+		auto-startup="true" order="1" request-channel="getDataOutputChannel" 
+		cacheManagerName="TestCache"
+		reply-timeout="100" />
+	<!-- **************** PUTS ********************* -->
+	<int:gateway id="putGateway" default-request-timeout="5000"
+		default-reply-timeout="5000" default-request-channel="putDataChannel"
+		service-interface="org.ehcache.myapp.service.CacheCaller" />
+
+	<int:service-activator id="putCacheService"
+		input-channel="putDataChannel" output-channel="putDataOutputChannel"
+		ref="cacheCaller" method="putData" />
+	<int:channel id="putDataChannel" />
+	<int:channel id="putDataOutputChannel" />
+	<int-ehcacheadapter:outbound-gateway
+		id="ehcacheGatewayPut" 
+		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		cache="mycache"
+		cacheManagerName="TestCache"
+		auto-startup="true" order="1" request-channel="putDataOutputChannel"
+		reply-timeout="100" />
+<!-- **************  A terminating channel, to show the result before handing off back to application******** -->
+	<int:service-activator id="endOfLine"
+		input-channel="endChannel" ref="cacheCaller" method="printData" />
+		
+<!-- **************  Poller for usgs seismic data -->		
+	<int:channel id="feedChannel" />
+	<int:transformer id="usgsHandler"
+		input-channel="feedChannel" output-channel="usgsCacheChannel" ref="usgs" method="convert" />
+	<int:service-activator id="printme"
+		input-channel="printMeChannel" ref="usgs" method="printMe" />
+		<int:channel id="printMeChannel" />
+	<int-feed:inbound-channel-adapter id="feedAdapter" 
+			channel="feedChannel" 
+			url="http://earthquake.usgs.gov/earthquakes/feed/atom/1.0/hour">
+		<int:poller fixed-rate="100000" max-messages-per-poll="100" />
+	</int-feed:inbound-channel-adapter>
+	<int:channel id="usgsCacheChannel" />
+	<int-ehcacheadapter:outbound-gateway
+		id="usgsGatewayPut" 
+		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		cache="usgsCache"
+		cacheManagerName="TestCache"
+		auto-startup="true" order="1" request-channel="usgsCacheChannel" reply-channel="printMeChannel"
+		reply-timeout="100" />
+</beans>
