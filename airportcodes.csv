@@ -1,100 +1,100 @@
-1, ATL, Hartsfield - Jackson Atlanta International, Atlanta, GA,"43,130,585"
-2, ORD, O'Hare International, Chicago, IL,"32,171,831"
-3, LAX, Los Angeles International, Los Angeles, CA,"28,857,755"
-4, DFW, Dallas/Fort Worth International, Dallas, TX,"27,100,656"
-5, DEN, Denver International, Denver, CO,"25,241,962"
-6, JFK, John F Kennedy International, New York, NY,"22,934,047"
-7, IAH, George Bush Intercontinental, Houston, TX,"19,528,631"
-8, SFO, San Francisco International, San Francisco, CA,"19,359,003"
-9, LAS, McCarran International, Las Vegas, NV,"18,996,738"
-10, PHX, Phoenix Sky Harbor International, Phoenix, AZ,"18,907,171"
-11, CLT, Charlotte/Douglas International, Charlotte, NC,"18,629,181"
-12, MIA, Miami International, Miami, FL,"17,017,654"
-13, MCO, Orlando International, Orlando, FL,"17,017,491"
-14, EWR, Newark Liberty International, Newark, NJ,"16,571,754"
-15, DTW, Detroit Metropolitan Wayne County, Detroit, MI,"15,643,890"
-16, MSP, Minneapolis-St Paul International, Minneapolis, MN,"15,512,487"
-17, SEA, Seattle-Tacoma International, Seattle, WA,"15,406,243"
-18, PHL, Philadelphia International, Philadelphia, PA,"14,951,254"
-19, BOS, Logan International, Boston, MA,"13,561,814"
-20, LGA, La Guardia, New York, NY,"12,001,501"
-21, IAD, Dulles International, Dulles, VA,"11,276,481"
-22, BWI, Baltimore/Washington International Thurgood Marshal, Baltimore, MD,"10,848,633"
-23, FLL, Fort Lauderdale/Hollywood International, Fort Lauderdale, FL,"10,829,810"
-24, SLC, Salt Lake City International, Salt Lake City, UT,"9,910,493"
-25, HNL, Honolulu International, Honolulu, HI,"8,740,077"
-26, DCA, Ronald Reagan Washington National, Washington DC, VA,"8,736,804"
-27, MDW, Midway International, Chicago, IL,"8,518,957"
-28, SAN, San Diego International, San Diego, CA,"8,430,509"
-29, TPA, Tampa International, Tampa, FL,"8,137,222"
-30, PDX, Portland International, Portland, OR,"6,582,227"
-31, STL, St Louis International, St. Louis, MO,"6,044,760"
-32, MCI, Kansas City International, Kansas City, MO,"4,946,173"
-33, MEM, Memphis International, Memphis, TN,"4,930,935"
-34, MKE, General Mitchell International, Milwaukee, WI,"4,760,170"
-35, OAK, Oakland International, Oakland, CA,"4,673,417"
-36, CLE, Cleveland-Hopkins International, Cleveland, OH,"4,591,097"
-37, RDU, Raleigh-Durham International, Raleigh, NC,"4,465,736"
-38, BNA, Nashville International, Nashville, TN,"4,432,527"
-39, SMF, Sacramento International, Sacramento, CA,"4,424,279"
-40, HOU, William P. Hobby, Houston, TX,"4,357,835"
-41, SNA, John Wayne Airport-Orange County, Santa Ana, CA,"4,278,623"
-42, SJU, Luis Munoz Marin International, San Juan, PR,"4,243,475"
-43, AUS, Austin-Bergstrom International, Austin, TX,"4,201,136"
-44, MSY, New Orleans International, New Orleans, LA,"4,088,889"
-45, SJC, San Jose International, San Jose, CA,"4,056,167"
-46, PIT, Pittsburgh International, Pittsburgh, PA,"3,996,656"
-47, SAT, San Antonio International, San Antonio, TX,"3,916,320"
-48, CVG, Cincinnati/Northern Kentucky International, Cincinnati, KY,"3,906,826"
-49, DAL, Dallas Love Field, Dallas, TX,"3,783,407"
-50, IND, Indianapolis International, Indianapolis, IN,"3,728,698"
-51, RSW, Southwest Florida International, Fort Myers, FL,"3,714,157"
-52, CMH, Port Columbus International, Columbus, OH,"3,145,962"
-53, PBI, Palm Beach International, Palm Beach, FL,"2,958,416"
-54, ABQ, Albuquerque International Sunport, Albuquerque, NM,"2,828,420"
-55, JAX, Jacksonville International, Jacksonville, FL,"2,755,719"
-56, BDL, Bradley International, Windsor Locks, CT,"2,640,155"
-57, BUF, Buffalo Niagara International, Buffalo, NY,"2,602,968"
-58, OGG, Kahului, Kahului, HI,"2,587,214"
-59, ONT, Ontario International, Ontario, CA,"2,380,881"
-60, ANC, Anchorage International, Anchorage, AK,"2,342,310"
-61, BUR, Bob Hope, Burbank, CA,"2,239,804"
-62, OMA, Eppley Airfield, Omaha, NE,"2,097,958"
-63, PVD, Theodore Francis Green State, Providence, RI,"1,951,566"
-64, RNO, Reno/Tahoe International, Reno, NV,"1,857,488"
-65, TUS, Tucson International, Tucson, AZ,"1,844,228"
-66, OKC, Will Rogers World, Oklahoma City, OK,"1,710,993"
-67, ORF, Norfolk International, Norfolk, VA,"1,663,294"
-68, RIC, Richmond International, Richmond, VA,"1,651,131"
-69, SDF, Louisville International, Louisville, KY,"1,651,037"
-70, GEG, Spokane International, Spokane, WA,"1,545,115"
-71, ELP, El Paso International, El Paso, TX,"1,509,093"
-72, LGB, Long Beach, Long Beach, CA,"1,451,404"
-73, BHM, Birmingham-Shuttlesworth International, Birmingham, AL,"1,443,215"
-74, GUM, Guam International, Tamuning, GU,"1,411,024"
-75, BOI, Boise Air Terminal, Boise, ID,"1,406,750"
-76, MHT, Manchester, Manchester, NH,"1,391,797"
-77, TUL, Tulsa International, Tulsa, OK,"1,382,895"
-78, KOA, Kona International, Kailua Kona, HI,"1,276,343"
-79, ROC, Greater Rochester International, Rochester, NY,"1,263,965"
-80, ALB, Albany International, Albany, NY,"1,250,282"
-81, DAY, James M Cox Dayton International, Dayton, OH,"1,248,787"
-82, LIH, Lihue, Lihue, HI,"1,175,203"
-83, LIT, Adams Field, Little Rock, AR,"1,097,403"
-84, GRR, Gerald R. Ford International, Grand Rapids, MI,"1,089,002"
-85, SYR, Syracuse Hancock International, Syracuse, NY,"1,024,505"
-86, CHS, Charleston AFB/International, Charleston, SC,"1,013,418"
-87, HPN, Westchester County, White Plains, NY,"999,831"
-88, DSM, Des Moines International, Des Moines, IA,"898,840"
-89, COS, City of Colorado Springs Municipal, Colorado Springs, CO,"877,367"
-90, ISP, Long Island MacArthur, Islip, NY,"858,741"
-91, GSO, Piedmont Triad International, Greensboro, NC,"855,073"
-92, PWM, Portland International Jetport, Portland, ME,"851,566"
-93, TYS, McGhee Tyson, Knoxville, TN,"804,917"
-94, SAV, Savannah/Hilton Head International, Savannah, GA,"798,194"
-95, MYR, Myrtle Beach International, Myrtle Beach, SC,"782,737"
-96, CAK, Akron-Canton Regional, Akron, OH,"771,107"
-97, MSN, Dane County Regional-Truax Field, Madison, WI,"766,953"
-98, ICT, Wichita Mid-Continent, Wichita, KS,"751,601"
-99, PSP, Palm Springs International, Palm Springs, CA,"751,068"
-100, PNS, Pensacola Gulf Coast Regional, Pensacola, FL,"729,748"
+1, ATL, Hartsfield - Jackson Atlanta International, Atlanta, GA,33.63670,-84.4281
+2, ORD, O'Hare International, Chicago, IL,41.97860,-87.9047
+3, LAX, Los Angeles International, Los Angeles, CA,33.94710,-118.4082
+4, DFW, Dallas/Fort Worth International, Dallas, TX,32.89690,-97.0381
+5, DEN, Denver International, Denver, CO,39.86170,-104.6731
+6, JFK, John F Kennedy International, New York, NY,40.63970,-73.7789
+7, IAH, George Bush Intercontinental, Houston, TX,29.98440,-95.3414
+8, SFO, San Francisco International, San Francisco, CA,37.61900,-122.3749
+9, LAS, McCarran International, Las Vegas, NV,36.08000,-115.1522
+10, PHX, Phoenix Sky Harbor International, Phoenix, AZ,33.43420,-112.0117
+11, CLT, Charlotte/Douglas International, Charlotte, NC,35.21390,-80.9431
+12, MIA, Miami International, Miami, FL,25.79330,-80.2906
+13, MCO, Orlando International, Orlando, FL,28.42940,-81.3089
+14, EWR, Newark Liberty International, Newark, NJ,40.69250,-74.1686
+15, DTW, Detroit Metropolitan Wayne County, Detroit, MI,42.2125,-83.3533
+16, MSP, Minneapolis-St Paul International, Minneapolis, MN,44.8819,-93.2217
+17, SEA, Seattle-Tacoma International, Seattle, WA,47.44890,-122.3094
+18, PHL, Philadelphia International, Philadelphia, PA,39.87190,-75.2411
+19, BOS, Logan International, Boston, MA,42.36310,-71.0064
+20, LGA, La Guardia, New York, NY,40.77720,-73.8725
+21, IAD, Dulles International, Dulles, VA,,
+22, BWI, Baltimore/Washington International Thurgood Marshal, Baltimore, MD,,
+23, FLL, Fort Lauderdale/Hollywood International, Fort Lauderdale, FL,,
+24, SLC, Salt Lake City International, Salt Lake City, UT,,
+25, HNL, Honolulu International, Honolulu, HI,,
+26, DCA, Ronald Reagan Washington National, Washington DC, VA,,
+27, MDW, Midway International, Chicago, IL,,
+28, SAN, San Diego International, San Diego, CA,,
+29, TPA, Tampa International, Tampa, FL,,
+30, PDX, Portland International, Portland, OR,,
+31, STL, St Louis International, St. Louis, MO,,
+32, MCI, Kansas City International, Kansas City, MO,,
+33, MEM, Memphis International, Memphis, TN,,
+34, MKE, General Mitchell International, Milwaukee, WI,,
+35, OAK, Oakland International, Oakland, CA,,
+36, CLE, Cleveland-Hopkins International, Cleveland, OH,,
+37, RDU, Raleigh-Durham International, Raleigh, NC,,
+38, BNA, Nashville International, Nashville, TN,,
+39, SMF, Sacramento International, Sacramento, CA,,
+40, HOU, William P. Hobby, Houston, TX,,
+41, SNA, John Wayne Airport-Orange County, Santa Ana, CA,,
+42, SJU, Luis Munoz Marin International, San Juan, PR,,
+43, AUS, Austin-Bergstrom International, Austin, TX,,
+44, MSY, New Orleans International, New Orleans, LA,,
+45, SJC, San Jose International, San Jose, CA,,
+46, PIT, Pittsburgh International, Pittsburgh, PA,,
+47, SAT, San Antonio International, San Antonio, TX,,
+48, CVG, Cincinnati/Northern Kentucky International, Cincinnati, KY,,
+49, DAL, Dallas Love Field, Dallas, TX,,
+50, IND, Indianapolis International, Indianapolis, IN,,
+51, RSW, Southwest Florida International, Fort Myers, FL,,
+52, CMH, Port Columbus International, Columbus, OH,,
+53, PBI, Palm Beach International, Palm Beach, FL,,
+54, ABQ, Albuquerque International Sunport, Albuquerque, NM,,
+55, JAX, Jacksonville International, Jacksonville, FL,,
+56, BDL, Bradley International, Windsor Locks, CT,,
+57, BUF, Buffalo Niagara International, Buffalo, NY,,
+58, OGG, Kahului, Kahului, HI,,
+59, ONT, Ontario International, Ontario, CA,,
+60, ANC, Anchorage International, Anchorage, AK,,
+61, BUR, Bob Hope, Burbank, CA,,
+62, OMA, Eppley Airfield, Omaha, NE,,
+63, PVD, Theodore Francis Green State, Providence, RI,,
+64, RNO, Reno/Tahoe International, Reno, NV,,
+65, TUS, Tucson International, Tucson, AZ,,
+66, OKC, Will Rogers World, Oklahoma City, OK,,
+67, ORF, Norfolk International, Norfolk, VA,,
+68, RIC, Richmond International, Richmond, VA,,
+69, SDF, Louisville International, Louisville, KY,,
+70, GEG, Spokane International, Spokane, WA,,
+71, ELP, El Paso International, El Paso, TX,,
+72, LGB, Long Beach, Long Beach, CA,,
+73, BHM, Birmingham-Shuttlesworth International, Birmingham, AL,,
+74, GUM, Guam International, Tamuning, GU,,
+75, BOI, Boise Air Terminal, Boise, ID,,
+76, MHT, Manchester, Manchester, NH,,
+77, TUL, Tulsa International, Tulsa, OK,,
+78, KOA, Kona International, Kailua Kona, HI,,
+79, ROC, Greater Rochester International, Rochester, NY,,
+80, ALB, Albany International, Albany, NY,,
+81, DAY, James M Cox Dayton International, Dayton, OH,,
+82, LIH, Lihue, Lihue, HI,,
+83, LIT, Adams Field, Little Rock, AR,,
+84, GRR, Gerald R. Ford International, Grand Rapids, MI,,
+85, SYR, Syracuse Hancock International, Syracuse, NY,,
+86, CHS, Charleston AFB/International, Charleston, SC,,
+87, HPN, Westchester County, White Plains, NY,,
+88, DSM, Des Moines International, Des Moines, IA,,
+89, COS, City of Colorado Springs Municipal, Colorado Springs, CO,,
+90, ISP, Long Island MacArthur, Islip, NY,,
+91, GSO, Piedmont Triad International, Greensboro, NC,,
+92, PWM, Portland International Jetport, Portland, ME,,
+93, TYS, McGhee Tyson, Knoxville, TN,,
+94, SAV, Savannah/Hilton Head International, Savannah, GA,,
+95, MYR, Myrtle Beach International, Myrtle Beach, SC,,
+96, CAK, Akron-Canton Regional, Akron, OH,,
+97, MSN, Dane County Regional-Truax Field, Madison, WI,,
+98, ICT, Wichita Mid-Continent, Wichita, KS,,
+99, PSP, Palm Springs International, Palm Springs, CA,,
+100, PNS, Pensacola Gulf Coast Regional, Pensacola, FL,,
