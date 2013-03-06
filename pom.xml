@@ -139,12 +139,13 @@
 	<artifactId>jackson-mapper-asl</artifactId>
 	<version>1.9.11</version>
 </dependency>
+<!-- Update the system path so that it points to the SIEhCache jar file-->
 <dependency>
     <groupId>org.ehcache.adapter</groupId>
     <artifactId>SIEhcache</artifactId>
     <version>1.0.0.BUILD-SNAPSHOT</version>
     <scope>system</scope>
-    <systemPath>/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCache/build/libs/SIEhCache-1.0.0.BUILD-SNAPSHOT.jar</systemPath>
+    <systemPath>/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/git/siehcacheadapter/build/libs/siehcacheadapter-1.0.0.BUILD-SNAPSHOT.jar</systemPath>
 </dependency>
 
  </dependencies>

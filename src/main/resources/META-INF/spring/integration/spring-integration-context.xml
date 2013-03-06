@@ -13,7 +13,7 @@
 		http://www.springframework.org/schema/integration/feed
 		http://www.springframework.org/schema/integration/feed/spring-integration-feed.xsd
 		http://www.springframework.org/schema/integration/ehcacheadapter
-		file:///Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCache/src/main/resources/org/ehcache/siehcache/config/xml/spring-integration-ehcacheadapter-2.2.xsd">
+		file:///Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/git/siehcacheadapter/src/main/resources/org/ehcache/siehcache/config/xml/spring-integration-ehcacheadapter-2.2.xsd">
 
 	<!-- See also: http://static.springsource.org/spring-integration/reference/htmlsingle/#gateway-proxy 
 		http://www.eaipatterns.com/MessagingGateway.html -->
@@ -31,7 +31,7 @@
 	<int:channel id="getChannel" />
 	<int-ehcacheadapter:outbound-gateway
 		id="ehcacheGatewayGetData" 
-		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		ehcacheXml="./configs/ehcache-dist.xml" 
 		cache="mycache"
 		auto-startup="true" order="1" request-channel="getChannel"
 		cacheManagerName="TestCache"
@@ -54,7 +54,7 @@
 	<int:channel id="endChannel" />
 	<int-ehcacheadapter:outbound-gateway
 		id="ehcacheadapterOutboundGateway" 
-		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml"
+		ehcacheXml="./configs/ehcache-dist.xml"
 		cache="mycache" auto-startup="true" order="1" request-channel="getDataOutputChannel"
 		cacheManagerName="TestCache"
 		reply-channel="endChannel" reply-timeout="100" />
@@ -78,7 +78,7 @@
 	<int:channel id="getDataOutputChannel" />
 	<int-ehcacheadapter:outbound-gateway
 		id="ehcacheGatewayGet" 
-		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		ehcacheXml="./configs/ehcache-dist.xml" 
 		cache="mycache"
 		auto-startup="true" order="1" request-channel="getDataOutputChannel" 
 		cacheManagerName="TestCache"
@@ -95,7 +95,7 @@
 	<int:channel id="putDataOutputChannel" />
 	<int-ehcacheadapter:outbound-gateway
 		id="ehcacheGatewayPut" 
-		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		ehcacheXml="./configs/ehcache-dist.xml" 
 		cache="mycache"
 		cacheManagerName="TestCache"
 		auto-startup="true" order="1" request-channel="putDataOutputChannel"
@@ -119,7 +119,7 @@
 	<int:channel id="usgsCacheChannel" />
 	<int-ehcacheadapter:outbound-gateway
 		id="usgsGatewayPut" 
-		ehcacheXml="/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml" 
+		ehcacheXml="./configs/ehcache-dist.xml" 
 		cache="usgsCache"
 		cacheManagerName="TestCache"
 		auto-startup="true" order="1" request-channel="usgsCacheChannel" reply-channel="printMeChannel"
