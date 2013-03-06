@@ -20,3 +20,4 @@ This component retrieves data from FAA and USGS and stores the results in a dist
 3) From the Run menu option select "Run Configuration"
 4) Create new Launch Configuration
 5) Set the heap to -Xmx512m
+6) 
