@@ -53,7 +53,7 @@ public final class Main {
 				"classpath:META-INF/spring/integration/*-context.xml");
 		CacheManager mgr = CacheManager.getCacheManager("TestCache");
 
-
+//adding comment
 		org.ehcache.myapp.util.Airport.putAirports(mgr);
 		testHarness(context);
 
