@@ -48,10 +48,10 @@ public final class Main {
 	 *            - command line arguments
 	 */
 	public static void main(final String... args) throws Exception {
-		CacheManager mgr = new CacheManager("/Users/glennrenfro/Documents/workspace-sts-2.9.2.RELEASE/SIEhCacheTestApp/configs/ehcache-dist.xml");//CacheManager.getCacheManager("TestCache");
 
 		final AbstractApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath:META-INF/spring/integration/*-context.xml");
+		CacheManager mgr = CacheManager.getCacheManager("TestCache");
 
 
 		org.ehcache.myapp.util.Airport.putAirports(mgr);
